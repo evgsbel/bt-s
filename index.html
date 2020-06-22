@@ -5,14 +5,117 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta property="og:title" content="ByteCode Service Creatio">
-<meta property="og:description" content="Создайте сервис без ограничений - автоматизируйте процессы оказания услуг, контроля качества и удовлетворенности клиентов, используя лучшие практики ITIL">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="service.bytecodecrm.ru">
-<meta property="og:url" content="https://service.bytecodecrm.ru/">
+    <meta property="og:title" content="ByteCode Service Creatio">
+    <meta property="og:description"
+          content="Создайте сервис без ограничений - автоматизируйте процессы оказания услуг, контроля качества и удовлетворенности клиентов, используя лучшие практики ITIL">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="service.bytecodecrm.ru">
+    <meta property="og:url" content="https://service.bytecodecrm.ru/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>ByteCode Service Creatio</title>
-<link href="assets/css/vendors.47ccfeeeb9c8f12a004c.css" rel="stylesheet"><link href="assets/css/app.47ccfeeeb9c8f12a004c.css" rel="stylesheet"></head>
+    <style>
+        .preloader__wrp {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #F8F8F8;
+        }
+
+        .cssload-loader {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 130px 0;
+            perspective: 780px;
+        }
+
+        .cssload-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+        }
+
+        .cssload-inner.cssload-one {
+            left: 0%;
+            top: 0%;
+            animation: cssload-rotate-one 1.15s linear infinite;
+            -o-animation: cssload-rotate-one 1.15s linear infinite;
+            -ms-animation: cssload-rotate-one 1.15s linear infinite;
+            -webkit-animation: cssload-rotate-one 1.15s linear infinite;
+            -moz-animation: cssload-rotate-one 1.15s linear infinite;
+            border-bottom: 3px solid #3D525D;
+        }
+
+        .cssload-inner.cssload-two {
+            right: 0%;
+            top: 0%;
+            animation: cssload-rotate-two 1.15s linear infinite;
+            -o-animation: cssload-rotate-two 1.15s linear infinite;
+            -ms-animation: cssload-rotate-two 1.15s linear infinite;
+            -webkit-animation: cssload-rotate-two 1.15s linear infinite;
+            -moz-animation: cssload-rotate-two 1.15s linear infinite;
+            border-right: 3px solid rgba(225, 0, 0, 0.99);
+        }
+
+        .cssload-inner.cssload-three {
+            right: 0%;
+            bottom: 0%;
+            animation: cssload-rotate-three 1.15s linear infinite;
+            -o-animation: cssload-rotate-three 1.15s linear infinite;
+            -ms-animation: cssload-rotate-three 1.15s linear infinite;
+            -webkit-animation: cssload-rotate-three 1.15s linear infinite;
+            -moz-animation: cssload-rotate-three 1.15s linear infinite;
+            border-top: 3px solid #FF4013;
+        }
+
+        @keyframes cssload-rotate-one {
+            0% {
+                transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            }
+        }
+
+        @keyframes cssload-rotate-two {
+            0% {
+                transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            }
+        }
+
+        @keyframes cssload-rotate-three {
+            0% {
+                transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            }
+        }
+
+    </style>
+</head>
 <body>
 <div class="preloader__wrp">
     <div class="cssload-loader">
@@ -65,7 +168,8 @@
                         <a href="#packages" class="header__nav_item btn js-ancor-link"><span>Стоимость</span></a>
                         <a href="#methodology" class="header__nav_item btn js-ancor-link"><span>Внедрение</span></a>
                         <a href="#clients" class="only-desktop header__nav_item btn js-ancor-link"><span>Клиенты</span></a>
-                        <a href="#clients-mobile" class="only-mobileheader__nav_item btn js-ancor-link"><span>Клиенты</span></a>
+                        <a href="#clients-mobile"
+                           class="only-mobileheader__nav_item btn js-ancor-link"><span>Клиенты</span></a>
                         <a href="#about" class="header__nav_item btn js-ancor-link"><span>О компании</span></a>
                         <a href="#contacts" class="header__nav_item btn js-ancor-link"><span>Контакты</span></a>
                     </div>
@@ -167,108 +271,108 @@
             <div class="cd-tabs__panel cd-tabs__panel--selected" id="tab-00">
                 <a href="./assets/img/sc-00.png" data-fancybox="tab-00">
                     <img srcset="./assets/img/s-00-w480.png 480w"
-                            src="./assets/img/s-00.png" alt="">
+                         src="./assets/img/s-00.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-01">
                 <a href="./assets/img/sc-01.png" data-fancybox="tab-01">
                     <img srcset="./assets/img/s-01-w480.png 480w"
-                            src="./assets/img/s-01.png" alt="">
+                         src="./assets/img/s-01.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-02">
                 <a href="./assets/img/sc-02.png" data-fancybox="tab-02">
                     <img srcset="./assets/img/s-02-w480.png 480w"
-                            src="./assets/img/s-02.png" alt="">
+                         src="./assets/img/s-02.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-03">
                 <a href="./assets/img/sc-03.png" data-fancybox="tab-03">
                     <img srcset="./assets/img/s-03-w480.png 480w"
-                            src="./assets/img/s-03.png" alt="">
+                         src="./assets/img/s-03.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-04">
                 <a href="./assets/img/sc-04.png" data-fancybox="tab-04">
                     <img srcset="./assets/img/s-04-w480.png 480w"
-                            src="./assets/img/s-04.png" alt="">
+                         src="./assets/img/s-04.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-05">
                 <a href="./assets/img/sc-05.png" data-fancybox="tab-05">
                     <img srcset="./assets/img/s-05-w480.png 480w"
-                            src="./assets/img/s-05.png" alt="">
+                         src="./assets/img/s-05.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-06">
                 <a href="./assets/img/sc-06.png" data-fancybox="tab-06">
                     <img srcset="./assets/img/s-06-w480.png 480w"
-                            src="./assets/img/s-06.png" alt="">
+                         src="./assets/img/s-06.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-07">
                 <a href="./assets/img/sc-07.png" data-fancybox="tab-07">
                     <img srcset="./assets/img/s-07-w480.png 480w"
-                            src="./assets/img/s-07.png" alt="">
+                         src="./assets/img/s-07.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-08">
                 <a href="./assets/img/sc-08.png" data-fancybox="tab-08">
                     <img srcset="./assets/img/s-08-w480.png 480w"
-                            src="./assets/img/s-08.png" alt="">
+                         src="./assets/img/s-08.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-09">
                 <a href="./assets/img/sc-09.png" data-fancybox="tab-09">
                     <img srcset="./assets/img/s-09-w480.png 480w"
-                            src="./assets/img/s-09.png" alt="">
+                         src="./assets/img/s-09.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-010">
                 <a href="./assets/img/sc-010.png" data-fancybox="tab-010">
                     <img srcset="./assets/img/s-010-w480.png 480w"
-                            src="./assets/img/s-010.png" alt="">
+                         src="./assets/img/s-010.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-011">
                 <a href="./assets/img/sc-011.png" data-fancybox="tab-011">
                     <img srcset="./assets/img/s-011-w480.png 480w"
-                            src="./assets/img/s-011.png" alt="">
+                         src="./assets/img/s-011.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-012">
                 <a href="./assets/img/sc-012.png" data-fancybox="tab-012">
                     <img srcset="./assets/img/s-012-w480.png 480w"
-                            src="./assets/img/s-012.png" alt="">
+                         src="./assets/img/s-012.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-013">
                 <a href="./assets/img/sc-013.png" data-fancybox="tab-013">
                     <img srcset="./assets/img/s-013-w480.png 480w"
-                            src="./assets/img/s-013.png" alt="">
+                         src="./assets/img/s-013.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-014">
                 <a href="./assets/img/sc-014.png" data-fancybox="tab-014">
                     <img srcset="./assets/img/s-014-w480.png 480w"
-                            src="./assets/img/s-014.png" alt="">
+                         src="./assets/img/s-014.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-015">
                 <a href="./assets/img/sc-015.png" data-fancybox="tab-015">
                     <img srcset="./assets/img/s-015-w480.png 480w"
-                            src="./assets/img/s-015.png" alt="">
+                         src="./assets/img/s-015.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-016">
                 <a href="./assets/img/sc-016.png" data-fancybox="tab-016">
                     <img srcset="./assets/img/s-016-w480.png 480w"
-                            src="./assets/img/s-016.png" alt="">
+                         src="./assets/img/s-016.png" alt="">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-017">
                 <a href="./assets/img/sc-017.png" data-fancybox="tab-017">
-<!--                    <img src="./assets/img/s-017.png" alt="">-->
+                    <!--                    <img src="./assets/img/s-017.png" alt="">-->
                     <img srcset="./assets/img/s-017-w480.png 480w"
                          src="./assets/img/s-017.png" alt="">
                 </a>
@@ -276,7 +380,7 @@
             <div class="cd-tabs__panel" id="tab-018">
                 <a href="./assets/img/sc-018.png" data-fancybox="tab-018">
                     <img srcset="./assets/img/s-018-w480.png 480w"
-                            src="./assets/img/s-018.png" alt="">
+                         src="./assets/img/s-018.png" alt="">
                 </a>
             </div>
         </div>
@@ -589,7 +693,7 @@
             </p>
             <div>
                 <img srcset="./assets/img/plt-w480.png 480w"
-                        src="./assets/img/plt.png" alt="">
+                     src="./assets/img/plt.png" alt="">
             </div>
         </div>
         <div class="bg-white platform__white"></div>
@@ -824,7 +928,7 @@
                                 <div class="package__check">
                                     <label class="checkbox package__label checked">
                                         <div class="package__checkbox-text">cloud</div>
-                                        <input  checked type="checkbox" name="check-right"
+                                        <input checked type="checkbox" name="check-right"
                                                class="package__input js-package__input js-package__input_right"/>
                                         <div class="checkbox__substitution"></div>
                                         <div class="package__checkbox-text">on-site</div>
@@ -1061,7 +1165,8 @@
                        required>
                 <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
                        required>
-                <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__" value="+7"
+                <input type="tel" class="form__input feedback__input" name="feedback__phone"
+                       placeholder="+7(___)___-__-__" value="+7"
                        required>
                 <textarea name="feedback__comm" class="feedback__comm form__comm"
                           placeholder="Ваше сообщение"></textarea>
@@ -1075,7 +1180,7 @@
                         <span>Прикрепить файл</span></label>
                 </div>
                 <div class="recaptcha feedback__recaptcha">
-                    
+
                 </div>
                 <div class="confidencial feedback__confidencial">
                     Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
@@ -1209,7 +1314,8 @@
         </div>
     </section>
     <section class="map">
-       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab8ee6428d5d4259ba83ac86ec82db7ccba4da2bf9fefa7defaa85c1912404319&amp;width=100%25&amp;height=638&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab8ee6428d5d4259ba83ac86ec82db7ccba4da2bf9fefa7defaa85c1912404319&amp;width=100%25&amp;height=638&amp;lang=ru_RU&amp;scroll=true"></script>
     </section>
     <section class="additionally" id="additionally">
         <div class="container">
@@ -1284,8 +1390,10 @@
             </div>
             <div class="footer_right">
                 <ul class="footer__nav">
-                    <li class="footer__nav-item only-desktop"><a href="#clients" class="footer__nav-link js-ancor-link">Клиенты</a></li>
-                    <li class="footer__nav-item only-mobile"><a href="#clients-mobile" class="footer__nav-link js-ancor-link">Клиенты</a></li>
+                    <li class="footer__nav-item only-desktop"><a href="#clients" class="footer__nav-link js-ancor-link">Клиенты</a>
+                    </li>
+                    <li class="footer__nav-item only-mobile"><a href="#clients-mobile"
+                                                                class="footer__nav-link js-ancor-link">Клиенты</a></li>
                     <li class="footer__nav-item"><a href="#contacts" class="footer__nav-link js-ancor-link">Контакты</a>
                     </li>
                     <li class="footer__nav-item"><a href="#conf-in" data-fancybox
@@ -1360,12 +1468,13 @@
                required>
         <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
                required>
-        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__" value="+7"
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
+               value="+7"
                required>
         <input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город*"
                required>
         <div class="recaptcha feedback__recaptcha">
-            
+
         </div>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
@@ -1399,12 +1508,13 @@
                required>
         <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
                required>
-        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__" value="+7"
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
+               value="+7"
                required>
         <input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город*"
                required>
         <div class="recaptcha feedback__recaptcha">
-            
+
         </div>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
@@ -1431,12 +1541,13 @@
                required>
         <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
                required>
-        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__" value="+7"
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
+               value="+7"
                required>
         <textarea name="feedback__comm" class="feedback__comm form__comm"
                   placeholder="Ваше сообщение"></textarea>
         <div class="recaptcha feedback__recaptcha">
-            
+
         </div>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
@@ -1463,7 +1574,8 @@
                required>
         <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
                required>
-        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__" value="+7"
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
+               value="+7"
                required>
         <input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания*"
                required>
@@ -1473,7 +1585,7 @@
         <textarea name="feedback__comm" class="feedback__comm form__comm"
                   placeholder="Ваше сообщение"></textarea>
         <div class="recaptcha feedback__recaptcha">
-            
+
         </div>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
@@ -1502,7 +1614,8 @@
                required>
         <input type="text" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
                required>
-        <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__" value="+7"
+        <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
+               value="+7"
                required>
         <textarea name="feedback__comm" class="feedback__comm form__comm"
                   placeholder="Ваше сообщение"></textarea>
@@ -1516,7 +1629,7 @@
                 <span>Прикрепить файл</span></label>
         </div>
         <div class="recaptcha feedback__recaptcha">
-            
+
         </div>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="">обработку персональных
@@ -1532,7 +1645,7 @@
         </svg>
     </div>
 </div>
-<a href="#result" data-fancybox id="otkr_z" style="display:none;">this</a> 
+<a href="#result" data-fancybox id="otkr_z" style="display:none;">this</a>
 <div class="result modal" style="display: none;" id="result">
     <div class="title text-center">Ваша запрос успешно отправлен!</div>
     <div class="feedback__subtitle">Мы свяжемся с вами в ближайшее время
@@ -1653,99 +1766,108 @@
     </div>
 </div>
 <div id="svg-icons" class="svg-icons"></div>
-
-<script src="assets/js/vendors.47ccfeeeb9c8f12a004c.js"></script>
-<script src="assets/js/app.47ccfeeeb9c8f12a004c.js"></script>
+<link href="assets/css/vendors.47ccfeeeb9c8f12a004c.css" rel="stylesheet">
+<link href="assets/css/app.47ccfeeeb9c8f12a004c.css" rel="stylesheet">
+<script src="assets/js/vendors.47ccfeeeb9c8f12a004c.js" async></script>
+<script src="assets/js/app.47ccfeeeb9c8f12a004c.js" async></script>
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/mask.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=owncallback&render=explicit" async defer></script>
 <script>
-var owncallback = function(){
-	var i = 0;
-	$(".feedback__recaptcha").each(function(){
-		i++;
-		var obj = $(this);
-		obj[0].id = 'captcha'+i;
-		grecaptcha.render(
-			obj.attr("id"), {
-			"sitekey" : "6Ld3YP8UAAAAAPEgSRjgRIC72Jwp0SQTm8cYNuLh",
-		});
-	});
-}
+    var owncallback = function () {
+        var i = 0;
+        $(".feedback__recaptcha").each(function () {
+            i++;
+            var obj = $(this);
+            obj[0].id = 'captcha' + i;
+            grecaptcha.render(
+                obj.attr("id"), {
+                    "sitekey": "6Ld3YP8UAAAAAPEgSRjgRIC72Jwp0SQTm8cYNuLh",
+                });
+        });
+    }
 
-$(document).ready(function(){
-	$('form').on('submit', function(){
-		let formData = new FormData(this);
-		$('input[type="file"]').each(function(key, value){
-			if(value['files'][0]){
-				filer = value['files'][0];
-				f = 'file'+key;
-				formData.append(f, filer);
-			}
-		});
-		
-		formData.append('theme', $(this).attr('id'));
-		
-		var res = '';
-		var bat = this;
-		$.ajax({
-			url: '/form.php',
-			type: 'POST',
-			async: false,
-			processData:false,
-			contentType:false,
-			data: formData,
-			success: function(data){
-				console.log(data);
-				if($(bat).attr('id') != 'otkr'){
-					if(data == 'good'){
-						console.log(bat);
-						$(bat).next().show();
-						$(bat).prev().hide();
-						$(bat).hide();
-					}
-				}else{
-					if(data == 'good'){
-						console.log('that');
-						$('#otkr_z')[0].click();
-					}
-				}
-			}
-		});
-		return false;
-	});
-});
+    $(document).ready(function () {
+        $('form').on('submit', function () {
+            let formData = new FormData(this);
+            $('input[type="file"]').each(function (key, value) {
+                if (value['files'][0]) {
+                    filer = value['files'][0];
+                    f = 'file' + key;
+                    formData.append(f, filer);
+                }
+            });
+
+            formData.append('theme', $(this).attr('id'));
+
+            var res = '';
+            var bat = this;
+            $.ajax({
+                url: '/form.php',
+                type: 'POST',
+                async: false,
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function (data) {
+                    console.log(data);
+                    if ($(bat).attr('id') != 'otkr') {
+                        if (data == 'good') {
+                            console.log(bat);
+                            $(bat).next().show();
+                            $(bat).prev().hide();
+                            $(bat).hide();
+                        }
+                    } else {
+                        if (data == 'good') {
+                            console.log('that');
+                            $('#otkr_z')[0].click();
+                        }
+                    }
+                }
+            });
+            return false;
+        });
+    });
 </script>
 <style>
-.feedback__recaptcha {
-    display: inline-block;
-    width: auto;
-    max-width: 304px;
-    margin: 30px auto 0;
-}
-button,input{
-	outline:none;
-}
+    .feedback__recaptcha {
+        display: inline-block;
+        width: auto;
+        max-width: 304px;
+        margin: 30px auto 0;
+    }
+
+    button, input {
+        outline: none;
+    }
 </style>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(64626682, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+    ym(64626682, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
 </script>
 <script>
-$(document).ready(function(){
-	$('input[name="feedback__phone"]').mask("+9(999)999-99-99");
-});
+    $(document).ready(function () {
+        $('input[name="feedback__phone"]').mask("+9(999)999-99-99");
+    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/64626682" style="; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/64626682" style="; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>
