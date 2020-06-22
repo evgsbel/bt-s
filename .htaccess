@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301] 
+
+RewriteCond %{REQUEST_URI} /index.php
+RewriteRule ^(.*)$ https://service.bytecodecrm.ru/ [R=301,L]
+</IfModule>
