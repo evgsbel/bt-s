@@ -249,9 +249,11 @@
         <div class="service__monitor cd-tabs__panels js-service-slider-top owl-carousel owl-theme">
             <div class="cd-tabs__panel cd-tabs__panel--selected" id="tab-00">
                 <a href="./assets/img/sc-00.png" data-fancybox="tab-00">
-                    <img class="lazy" srcset="./assets/img/s-00-w480.png 480w,
-                    ./assets/img/s-00.png 640w"
-                         data-src="./assets/img/s-00.png" alt="">
+                    <img class="lazyload"
+                         data-src="./assets/img/s-00.png" alt=""
+                         data-sizes="auto"
+                         data-srcset="./assets/img/s-00-w480.png 480w,
+                            ./assets/img/s-00.png 640w">
                 </a>
             </div>
             <div class="cd-tabs__panel" id="tab-01">
@@ -1771,6 +1773,7 @@
 <script src="assets/js/app.47ccfeeeb9c8f12a004c.js" async></script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/jquery.lazy.min.js"></script>
+<script src="assets/js/lazysizes.min.js"></script>
 <script src="assets/js/mask.js"></script>
 
 <script src="https://www.google.com/recaptcha/api.js?onload=owncallback&render=explicit" async defer></script>
