@@ -224,8 +224,8 @@
                         </div>
                     </div>
                     <div class="header__video_overlay"></div>
-                    <iframe class="header__video_frame" width="100%" height="100%"
-                            src="https://www.youtube.com/embed/C21OlSWBolM" frameborder="0"
+                    <iframe class="header__video_frame lazyload" width="100%" height="100%"
+                            data-src="https://www.youtube.com/embed/C21OlSWBolM" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                 </div>
@@ -1353,8 +1353,7 @@
         </div>
     </section>
     <section class="map">
-        <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab8ee6428d5d4259ba83ac86ec82db7ccba4da2bf9fefa7defaa85c1912404319&amp;width=100%25&amp;height=638&amp;lang=ru_RU&amp;scroll=true"></script>
+        <iframe class="lazyload" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8ee6428d5d4259ba83ac86ec82db7ccba4da2bf9fefa7defaa85c1912404319&amp;source=constructor" width="100%" height="638" frameborder="0"></iframe>
     </section>
     <section class="additionally" id="additionally">
         <div class="container">
