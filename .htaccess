@@ -8,6 +8,8 @@ RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 RewriteCond %{REQUEST_URI} /index.php
 RewriteRule ^(.*)$ https://service.bytecodecrm.ru/ [R=301,L]
 
+^https?:\/\/([^\/]+\.)?(service.bytecodecrm/\.ru|webvisor\.com)\/
+
     ExpiresActive on
     ExpiresDefault                                      "access plus 1 month"
 
