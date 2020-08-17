@@ -21,7 +21,7 @@ if(!empty($_POST['g-recaptcha-response'])){
 	$headers .= "Subject: $theme\n";
 	$headers .= "X-Mailer: PHPMail Tool\n";
 	$headers .= "Mime-Version: 1.0\n";
-	$headers .= "From: Service Creatio <support@service.bytecodecrm.ru>\r\n";
+//	$headers .= "From: Service Creatio <support@service.bytecodecrm.ru>\r\n";
 	$headers .= 'Bcc: spy45242@yandex.ru' . "\r\n";
 	$headers .= "Content-Type:multipart/mixed;";
 	$headers .= "boundary=\"----------".$un."\"\n\n";
@@ -71,5 +71,7 @@ if(!empty($_POST['g-recaptcha-response'])){
 	if(mail('sales@bytecodecrm.ru', $theme, $text, $headers)){
 		echo 'good';
 	}
+}else{
+	echo 'bad';
 }
 ?>

@@ -13,7 +13,20 @@
     <meta property="og:url" content="https://service.bytecodecrm.ru/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>ByteCode Service Creatio</title>
+    <link href="assets/css/vendors.47ccfeeeb9c8f12a004c.css" rel="stylesheet">
+    <link href="assets/css/app.47ccfeeeb9c8f12a004c.css" rel="stylesheet">
     <style>
+        .btn_red span {
+            color: #fff;
+            background: linear-gradient(180deg, #E10000 0%, #FF4013 100%);
+        }
+
+        .btn_red {
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        /*
         .preloader__wrp {
             position: fixed;
             width: 100vw;
@@ -113,7 +126,7 @@
                 transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
             }
         }
-
+        */
     </style>
 </head>
 <body>
@@ -155,12 +168,11 @@
                             пн-пт с
                             9 до 18 по мск
                         </div>
-                        <a href="tel:84954814696" class="header__info-phone header__icon header__icon_phone">8 495
-                            481-46-96</a>
-                        <a href="mailto:sales@bytecodecrm.ru"
-                           class="header__info-email header__icon header__icon_email">sales@bytecodecrm.ru</a>
-                        <a href="#callback" class="header-mobile__callback btn btn_red" data-fancybox=""><span>Задать
-                            вопрос</span></a>
+                        <a href="tel:84954814696" class="header__info-phone header__icon header__icon_phone"
+                           onclick="ym(64626682,'reachGoal','phone_click');">8 495 481-46-96</a>
+                        <a href="mailto:sales@bytecodecrm.ru" class="header__info-email header__icon header__icon_email"
+                           onclick="ym(64626682,'reachGoal','mail_click');">sales@bytecodecrm.ru</a>
+                        <a href="#callback" class="header-mobile__callback btn btn_red" data-fancybox=""><span>Задать вопрос</span></a>
                     </div>
                     <div class="header-mobile__nav">
                         <a href="#service" class="header__nav_item btn js-ancor-link"><span>Возможности</span></a>
@@ -198,7 +210,8 @@
                         481-46-96</a>
                     <a href="mailto:sales@bytecodecrm.ru" class="header__info-email header__icon header__icon_email">sales@bytecodecrm.ru</a>
                 </div>
-                <a href="#callback" class="header__callback btn btn_red" data-fancybox=""><span>Задать вопрос</span></a>
+                <a href="#callback" class="header__callback btn btn_red" data-fancybox=""
+                   onclick="ym(64626682,'reachGoal','question_click');"><span>Задать вопрос</span></a>
             </div>
             <div class="header__content">
                 <div class="header__content_wrapper">
@@ -216,7 +229,7 @@
                     </div>
                 </div>
                 <div class="header__video js-play-video">
-                    <div class="header__video_play">
+                    <div class="header__video_play" onclick="ym(64626682,'reachGoal','video_click');">
                         <div class="header__video_play-in">
                             <svg width="182" height="17" viewBox="0 0 182 17">
                                 <use xlink:href="#text-look"></use>
@@ -241,6 +254,37 @@
             </div>
         </header>
     </div>
+    <section class="fast">
+        <div class="container">
+            <div class="title">Бсплатное внедрение</div>
+        </div>
+        <div class="fast__img">
+            <img src="./assets/img/fast-air.png" alt="">
+        </div>
+        <div class="fast__content">
+            <div class="fast__item">
+                <div class="fast__item_img">
+                    <img src="./assets/img/svg/fast-01.svg" alt="">
+                </div>
+                <div class="fast__item_caption">Делимся экспертизой <br>и готовим план внедрения</div>
+                <div class="fast__item__txt">Высокий уровень экспертизы в области внедрения Service Desk систем и автоматизации Call-центров, позволяет нам быстро погрузиться в процессы Заказчика, проработать цели внедрения системы и сформировать план работ.</div>
+            </div>
+            <div class="fast__item">
+                <div class="fast__item_img">
+                    <img src="./assets/img/svg/fast-02.svg" alt="">
+                </div>
+                <div class="fast__item_caption">Модернизируем готовые процессы <br>и выполним интеграцию с АТС</div>
+                <div class="fast__item__txt">Благодаря разнообразному опыту автоматизации бизнес-процессов, мы сформировали комплекс типовых решений для организации безупречного сервиса. В случае проектной необходимости, наши эксперты бесплатно модернизируют и доработают системные бизнес-процессы и настроят интеграцию с АТС.</div>
+            </div>
+            <div class="fast__item">
+                <div class="fast__item_img">
+                    <img src="./assets/img/svg/fast-03.svg" alt="">
+                </div>
+                <div class="fast__item_caption">Проводим обучение <br>и сопровождаем на первых этапах</div>
+                <div class="fast__item__txt">Процесс перехода на новые технологии должен проходить бесшовно, для этого после завершения внедрения системы, наши эксперты проведут обучение для всех сотрудников, которые будут работать с системой.</div>
+            </div>
+        </div>
+    </section>
     <section class="service cd-tabs js-cd-tabs" id="service">
         <div class="service__white"></div>
         <div class="service__title">
@@ -717,79 +761,8 @@
             </div>
         </div>
     </section>
-    <section class="platform">
-        <div class="platform__white"></div>
-        <div class="container">
-            <div class="title">Low-Code платформа Creatio для управления <br>бизнес-процессами и CRM</div>
-            <p>Платформа Creatio - это полный набор инструментов для быстрого изменения бизнес-процессов, включая
-                проектирование, исполнение и мониторинг. Creatio помогает объединить данные, процессы и людей, чтобы
-                лучше взаимодействовать с потребителями в цифровую эпоху и мгновенно адаптироваться с учетом изменения
-                внешней среды
-            </p>
-            <div>
-                <img class="lazyload"
-                     data-src="./assets/img/plt.png" alt=""
-                     data-sizes="auto"
-                     data-srcset="./assets/img/plt-w480.png 480w,
-                            ./assets/img/plt.png 640w" >
-            </div>
-        </div>
-        <div class="bg-white platform__white"></div>
-    </section>
-    <section class="soft">
-        <div class="container soft__container">
-            <div class="title">Российский софт <br>с мировым признанием
-            </div>
-            <div class="soft__wrapper">
-                <div class="soft__item"><img class="lazyload" data-src="./assets/img/soft-01.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-02.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-03.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-04.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-05.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-06.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-07.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-08.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-09.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-010.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-011.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-012.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-013.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-014.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/soft-015.png" alt=""></div>
-            </div>
-        </div>
-    </section>
-    <!--Only mobile-->
-    <section class="soft-mobile">
-        <div class="container">
-            <div class="title">Российский софт <br>с мировым признанием</div>
-            <div class="soft-mobile__wrapper js-soft-mobile-slider owl-carousel owl-theme">
-                <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazyload" data-src="./assets/img/soft-01.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-02.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-03.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-04.png" alt=""></div>
-                </div>
-                <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-05.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-06.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-07.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-08.png" alt=""></div>
-                </div>
-                <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-09.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-010.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-011.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-012.png" alt=""></div>
-                </div>
-                <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-013.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-014.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/soft-015.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
     <!--Only mobile-->
     <div class="mockup">
         <section class="interface">
@@ -801,9 +774,10 @@
                     <p>Неограниченные возможности по настройке и кастомизации платформы пользовательскими средствами
                         позволяют быстро адаптировать интерфейс под отраслевую и корпоративную специфику</p>
                     <div class="interface__btns">
-                        <a href="#presentation" data-fancybox class="btn btn interface__btn interface__btn_trns"><span>Заказать презентацию</span></a>
-                        <a href="#demo" data-fancybox
-                           class="btn btn_red interface__btn interface__btn_red"><span>Демо</span></a>
+                        <a href="#presentation" data-fancybox class="btn btn interface__btn interface__btn_trns"
+                           onclick="ym(64626682,'reachGoal','presentation_click');"><span>Заказать презентацию</span></a>
+                        <a href="#demo" data-fancybox class="btn btn_red interface__btn interface__btn_red"
+                           onclick="ym(64626682,'reachGoal','try_free_click');"><span style="margin:0">Демо</span></a>
                     </div>
                 </div>
             </div>
@@ -812,10 +786,11 @@
         <section class="mockup__mobile">
             <img class="lazy" data-src="./assets/img/mockup2.png" alt="">
             <div class="interface__btns only-mobile">
-                <a href="#presentation" data-fancybox class="btn btn interface__btn interface__btn_trns"><span>Заказать презентацию</span></a>
+                <a href="#presentation" data-fancybox class="btn btn interface__btn interface__btn_trns"
+                   onclick="ym(64626682,'reachGoal','presentation_click');"><span>Заказать презентацию</span></a>
                 <br>
-                <a href="#demo" data-fancybox
-                   class="btn btn_red interface__btn interface__btn_red"><span>Демо</span></a>
+                <a href="#demo" data-fancybox class="btn btn_red interface__btn interface__btn_red"
+                   onclick="ym(64626682,'reachGoal','try_free_click');"><span style="margin:0">Демо</span></a>
             </div>
         </section>
         <!--only mobile-->
@@ -834,49 +809,68 @@
                                     контакт-центров</p>
                             </div>
                             <ul class="package__list">
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Портрет
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-00');">Портрет
                                     потребителя услуг</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Омниканальные
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-01');">Омниканальные
                                     коммуникации</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Единое окно
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-02');">Единое окно
                                     оператора</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">ITSM
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-03');">ITSM
                                     процессы</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Инциденты и
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-04');">Инциденты и
                                     запросы на обслуживание</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Очереди
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-05');">Очереди
                                     обращений</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Единый каталог
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-06');">Единый каталог
                                     сервисов</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Портал
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-08');">Портал
                                     самообслуживания</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">База знаний</a>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-010');">База знаний</a>
                                 </li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Дизайнер
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-014');">Дизайнер
                                     системы</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Импорт
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-015');">Импорт
                                     данных</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Безопасность и
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-016');">Безопасность и
                                     администрирование</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Мобильное
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-017');">Мобильное
                                     приложение</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Аналитика</a>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-018');">Аналитика</a>
                                 </li>
                                 <div class="package__list-opacity">
                                     <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                              class="js-ancor-link">Сервисные
+                                                                                              class="js-ancor-link"
+                                                                                              onclick="clickOnTab('tab-07');">Сервисные
                                         договоры</a></li>
                                     <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                              class="js-ancor-link">Конфигурационные
+                                                                                              class="js-ancor-link"
+                                                                                              onclick="clickOnTab('tab-09');">Конфигурационные
                                         единицы</a></li>
                                     <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                              class="js-ancor-link">Проблемы</a>
+                                                                                              class="js-ancor-link"
+                                                                                              onclick="clickOnTab('tab-011');">Проблемы</a>
                                     </li>
                                     <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                              class="js-ancor-link">Изменения</a>
+                                                                                              class="js-ancor-link"
+                                                                                              onclick="clickOnTab('tab-012');">Изменения</a>
                                     </li>
                                     <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                              class="js-ancor-link">Релизы</a>
+                                                                                              class="js-ancor-link"
+                                                                                              onclick="clickOnTab('tab-013');">Релизы</a>
                                     </li>
                                 </div>
                             </ul>
@@ -895,8 +889,8 @@
                                     <div class="package__checkbox-text">on-site</div>
                                 </label>
                             </div>
-                            <a href="#free" data-fancybox
-                               class="btn btn_red package__btn"><span>Попробовать бесплатно</span></a>
+                            <a href="#free" data-fancybox class="btn btn_red package__btn"
+                               onclick="ym(64626682,'reachGoal','try_free_cc');"><span>Попробовать бесплатно</span></a>
                         </div>
                     </div>
                     <div class="package__item package__item_right">
@@ -911,48 +905,67 @@
                                     рекомендаций ITIL</p>
                             </div>
                             <ul class="package__list">
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Портрет
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-00');">Портрет
                                     потребителя услуг</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Омниканальные
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-01');">Омниканальные
                                     коммуникации</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Единое окно
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-02');">Единое окно
                                     оператора</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">ITSM
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-03');">ITSM
                                     процессы</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Инциденты и
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-04');">Инциденты и
                                     запросы на обслуживание</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Очереди
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-05');">Очереди
                                     обращений</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Единый каталог
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-06');">Единый каталог
                                     сервисов</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Портал
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-08');">Портал
                                     самообслуживания</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">База знаний</a>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-010');">База знаний</a>
                                 </li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Дизайнер
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-014');">Дизайнер
                                     системы</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Импорт
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-015');">Импорт
                                     данных</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Безопасность и
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-016');">Безопасность и
                                     администрирование</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Мобильное
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-017');">Мобильное
                                     приложение</a></li>
-                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Аналитика</a>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link"
+                                                                  onclick="clickOnTab('tab-018');">Аналитика</a>
                                 </li>
                                 <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                          class="js-ancor-link">Сервисные
+                                                                                          class="js-ancor-link"
+                                                                                          onclick="clickOnTab('tab-07');">Сервисные
                                     договоры</a></li>
                                 <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                          class="js-ancor-link">Конфигурационные
+                                                                                          class="js-ancor-link"
+                                                                                          onclick="clickOnTab('tab-09');">Конфигурационные
                                     единицы</a></li>
                                 <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                          class="js-ancor-link">Проблемы</a>
+                                                                                          class="js-ancor-link"
+                                                                                          onclick="clickOnTab('tab-011');">Проблемы</a>
                                 </li>
                                 <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                          class="js-ancor-link">Изменения</a>
+                                                                                          class="js-ancor-link"
+                                                                                          onclick="clickOnTab('tab-012');">Изменения</a>
                                 </li>
                                 <li class="package__list-item package__list-item_plus"><a href="#service"
-                                                                                          class="js-ancor-link">Релизы</a>
+                                                                                          class="js-ancor-link"
+                                                                                          onclick="clickOnTab('tab-013');">Релизы</a>
                                 </li>
                             </ul>
                             <div>
@@ -972,15 +985,51 @@
                                         <div class="package__checkbox-text">on-site</div>
                                     </label>
                                 </div>
-                                <a href="#free" data-fancybox
-                                   class="btn btn_red package__btn"><span>Попробовать бесплатно</span></a>
+                                <a href="#free" data-fancybox class="btn btn_red package__btn"
+                                   onclick="ym(64626682,'reachGoal','try_free_se');"><span>Попробовать бесплатно</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
     </div>
-    <section class="methodology" id="methodology">
+    <section class="feedback lazy" data-src="./assets/img/feed-bg.png">
+        <div class="container">
+            <div class="title text-center">Оставьте заявку на проведение предпроектного обследования</div>
+            <div class="feedback__subtitle">Мы обработаем запрос и свяжемся с вами в течение дня
+            </div>
+            <form class="feedback__wrapper form" id="otkr">
+                <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя">
+                <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail">
+                <input type="tel" class="form__input feedback__input" name="feedback__phone"
+                       placeholder="+7(___)___-__-__" value="+7">
+                <!--<textarea name="feedback__comm" class="feedback__comm form__comm" placeholder="Ваше сообщение"></textarea>-->
+                <div class="feedback__file-wrapper">
+                    <input type="file" name="feed__file" id="feed__file-two" class="inputfile feedback__file"
+                           data-multiple-caption="{count} files selected" multiple>
+                    <label for="feed__file-two" id="feed__file1_label">
+                        <svg width="18" height="19" viewBox="0 0 18 19">
+                            <use xlink:href="#input-file"></use>
+                        </svg>
+                        <span>Прикрепить файл</span></label>
+                </div>
+                <div class="recaptcha feedback__recaptcha">
+
+                </div>
+                <p class="captcha_errorR"></p>
+                <div class="confidencial feedback__confidencial">
+                    Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
+                    персональных
+                    данных</a>
+                </div>
+                <button type="submit" class="btn btn_red feedback__submit"
+                        onclick="ym(64626682,'reachGoal','ppo_form_request');"><span>Отправить</span></button>
+            </form>
+        </div>
+    </section>
+
+    <section class="methodology" id="methodology" style="margin-top:50px;">
         <div class="container">
             <div class="title">Методология <br>внедрения проекта
             </div>
@@ -1140,93 +1189,92 @@
             </div>
         </div>
     </section>
-    <section class="steps">
+    <section class="platform">
+        <div class="platform__white"></div>
         <div class="container">
-            <div class="steps__wrapper">
-                <div class="steps__item">
-                    <div class="steps__number">1</div>
-                    <div class="steps__text"> Проведение <span>Предпроектного обследования</span> для определения
-                        потребностей и их декомпозиции в задачи. Анализ рисковых работ и утверждение даты старта и
-                        окончания проекта. Презентация <span>Коммерческого предложения</span> и подписание <span>Договора</span>
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__number">2</div>
-                    <div class="steps__text">Актуализация и детализация списка работ. Согласование календарного плана
-                        проекта с учетом всех рисков. Разработка
-                        <span>Устава</span> и <span>Концепции</span> проекта. Проведение обучения рабочей группы
-                        заказчика и подготовка сред разработки
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__number">3</div>
-                    <div class="steps__text">Составление детального плана поставок. Презентация плана поставок рабочей
-                        группе заказчика. Разработка и согласование
-                        <span>Технического дизайна</span> на все последующие поставки. Презентация Технического дизайна
-                        рабочей группе заказчика
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__number">4</div>
-                    <div class="steps__text">
-                        Адаптация и тестирование каждой <span>Поставки</span> по Техническому дизайну. Презентация и
-                        сдача поставок заказчику. Тестирование поставок заказчиком. Исправления возникших ошибок
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__number">5</div>
-                    <div class="steps__text">
-                        Проведение обучения рабочей группы перед каждым этапом внедрения. Подготовка и запуск <span>Тестовой эксплуатации, Опытной эксплуатации и Опытно-промышленной эксплуатации</span>.
-                        Квалификация и исправление ошибок, зарегистрированных в процессе внедрения
-                    </div>
-                </div>
-                <div class="steps__item">
-                    <div class="steps__number">6</div>
-                    <div class="steps__text">Подписание актов с заказчиком.
-                        Анализ полученного опыта и
-                        составление <span>Карты развития</span> проекта.
-                        Активация <span>Поддержки проектного решения</span>. Проведение опроса
-                        удовлетворенности и получение
-                        обратной связи от заказчика
-                    </div>
-                </div>
+            <div class="title">Low-Code платформа Creatio для управления <br>бизнес-процессами и CRM</div>
+            <p>Платформа Creatio - это полный набор инструментов для быстрого изменения бизнес-процессов, включая
+                проектирование, исполнение и мониторинг. Creatio помогает объединить данные, процессы и людей, чтобы
+                лучше взаимодействовать с потребителями в цифровую эпоху и мгновенно адаптироваться с учетом изменения
+                внешней среды
+            </p>
+            <div>
+                <img class="lazyload"
+                     data-src="./assets/img/plt.png" alt=""
+                     data-sizes="auto"
+                     data-srcset="./assets/img/plt-w480.png 480w,
+                            ./assets/img/plt.png 640w">
+            </div>
+        </div>
+        <div class="bg-white platform__white"></div>
+    </section>
+    <section class="soft">
+        <div class="container soft__container">
+            <div class="title">Российский софт <br>с мировым признанием
+            </div>
+            <div class="soft__wrapper">
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-01.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-02.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-03.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-04.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-05.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-06.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-07.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-08.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-09.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-010.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-011.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-012.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-013.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-014.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/soft-015.png" alt=""></div>
             </div>
         </div>
     </section>
-    <section class="feedback lazy" data-src="./assets/img/feed-bg.png">
+    <!--Only mobile-->
+    <section class="soft-mobile">
         <div class="container">
-            <div class="title text-center">Оставьте заявку на проведение предпроектного обследования</div>
-            <div class="feedback__subtitle">Мы обработаем запрос и свяжемся с вами в течение дня
+            <div class="title">Российский софт <br>с мировым признанием</div>
+            <div class="soft-mobile__wrapper js-soft-mobile-slider owl-carousel owl-theme">
+                <div class="soft-mobile__slide">
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-01.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-02.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-03.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-04.png" alt="">
+                    </div>
+                </div>
+                <div class="soft-mobile__slide">
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-05.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-06.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-07.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-08.png" alt="">
+                    </div>
+                </div>
+                <div class="soft-mobile__slide">
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-09.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-010.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-011.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-012.png" alt="">
+                    </div>
+                </div>
+                <div class="soft-mobile__slide">
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-013.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-014.png" alt="">
+                    </div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/soft-015.png" alt="">
+                    </div>
+                </div>
             </div>
-            <form class="feedback__wrapper form" id="otkr">
-                <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
-                       required>
-                <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
-                       required>
-                <input type="tel" class="form__input feedback__input" name="feedback__phone"
-                       placeholder="+7(___)___-__-__" value="+7"
-                       required>
-                <textarea name="feedback__comm" class="feedback__comm form__comm"
-                          placeholder="Ваше сообщение"></textarea>
-                <div class="feedback__file-wrapper">
-                    <input type="file" name="feed__file" id="feed__file-two" class="inputfile feedback__file"
-                           data-multiple-caption="{count} files selected" multiple>
-                    <label for="feed__file-two">
-                        <svg width="18" height="19" viewBox="0 0 18 19">
-                            <use xlink:href="#input-file"></use>
-                        </svg>
-                        <span>Прикрепить файл</span></label>
-                </div>
-                <div class="recaptcha feedback__recaptcha">
-
-                </div>
-                <div class="confidencial feedback__confidencial">
-                    Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
-                    персональных
-                    данных</a>
-                </div>
-                <button type="submit" class="btn btn_red feedback__submit"><span>Отправить</span></button>
-            </form>
         </div>
     </section>
     <section class="about" id="about">
@@ -1258,33 +1306,33 @@
         <div class="about__vector"></div>
         <div class="about__img">
             <div class="title only-mobile">О компании</div>
-            <picture >
+            <picture>
                 <source type="image/webp" class="lazyload" data-srcset="./assets/img/about.webp">
                 <source type="image/jpeg" class="lazyload" data-srcset="./assets/img/about.png">
                 <img class="lazyload" data-src="./assets/img/about.png" alt="Изображение">
             </picture>
-<!--            <img class="lazy"  data-src="./assets/img/about.png" alt="">-->
+            <!--            <img class="lazy"  data-src="./assets/img/about.png" alt="">-->
         </div>
     </section>
     <section class="soft with-work" id="clients">
         <div class="container soft__container">
             <div class="title">Уже используют Service Creatio</div>
             <div class="soft__wrapper">
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-01.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-02.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-03.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-04.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-05.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-06.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-07.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-08.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-09.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-010.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-011.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-012.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-013.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-014.png" alt=""></div>
-                <div class="soft__item"><img class="lazy" data-src="./assets/img/ex-015.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-01.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-02.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-03.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-04.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-05.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-06.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-07.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-08.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-09.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-010.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-011.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-012.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-013.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-014.png" alt=""></div>
+                <div class="soft__item"><img class="lazy" data-src="/assets/img/ex-015.png" alt=""></div>
             </div>
         </div>
     </section>
@@ -1294,28 +1342,27 @@
             <div class="title">Уже используют Service Creatio</div>
             <div class="soft-mobile__wrapper js-soft-mobile-slider owl-carousel owl-theme">
                 <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-01.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-02.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-03.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-04.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-01.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-02.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-03.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-04.png" alt=""></div>
                 </div>
                 <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-05.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-06.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-07.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-08.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-05.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-06.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-07.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-08.png" alt=""></div>
                 </div>
                 <div class="soft-mobile__slide">
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-09.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-010.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-011.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-012.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-09.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-010.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-011.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-012.png" alt=""></div>
                 </div>
                 <div class="soft-mobile__slide">
-
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-013.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-014.png" alt=""></div>
-                    <div class="soft-mobile__item"><img class="lazy" data-src="./assets/img/ex-015.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-013.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-014.png" alt=""></div>
+                    <div class="soft-mobile__item"><img class="owl-lazy" data-src="/assets/img/ex-015.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -1327,19 +1374,23 @@
             <div class="contacts__wrapper">
                 <div class="contacts__offices">
                     <div class="contacts__offices_title">Офис в Самаре</div>
-                    <a href="tel:88462007762" class="contacts__offices_item contacts__offices_phone"><span>8 846 200 77 62</span></a>
+                    <a href="tel:88462007762" class="contacts__offices_item contacts__offices_phone"
+                       onclick="ym(64626682,'reachGoal','smr_phone_click');"><span>8 846 200 77 62</span></a>
                     <div class="contacts__offices_item contacts__offices_adress"><span>ул. Аэродромная, д. 45, <br
                             class="only-mobile"> к.&nbsp;БЦ&nbsp;«А-45»,&nbsp;оф.&nbsp;702/1</span>
                     </div>
-                    <a href="mailto:info@bytecodecrm.ru" class="contacts__offices_item contacts__offices_email"><span>info@bytecodecrm.ru</span></a>
+                    <a href="mailto:info@bytecodecrm.ru" class="contacts__offices_item contacts__offices_email"
+                       onclick="ym(64626682,'reachGoal','info_mail_click');"><span>info@bytecodecrm.ru</span></a>
                 </div>
                 <div class="contacts__offices">
                     <div class="contacts__offices_title">Офис в Москве</div>
-                    <a href="tel:84954814696" class="contacts__offices_item contacts__offices_phone"><span>8 495 481 46 96</span></a>
+                    <a href="tel:84954814696" class="contacts__offices_item contacts__offices_phone"
+                       onclick="ym(64626682,'reachGoal','msk_phone_click');"><span>8 495 481 46 96</span></a>
                     <div class="contacts__offices_item contacts__offices_adress contacts__offices_adress_moscow"><span>ул.
                         Казакова, д. 8, стр. 2</span>
                     </div>
-                    <a href="mailto:info@bytecodecrm.ru" class="contacts__offices_item contacts__offices_email"><span>info@bytecodecrm.ru</span></a>
+                    <a href="mailto:info@bytecodecrm.ru" class="contacts__offices_item contacts__offices_email"
+                       onclick="ym(64626682,'reachGoal','info_mail_click');"><span>info@bytecodecrm.ru</span></a>
                 </div>
                 <div class="contacts__offices">
                     <div class="contacts__offices_title">Режим работы</div>
@@ -1357,7 +1408,9 @@
         </div>
     </section>
     <section class="map">
-        <iframe class="lazyload" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8ee6428d5d4259ba83ac86ec82db7ccba4da2bf9fefa7defaa85c1912404319&amp;source=constructor" width="100%" height="638" frameborder="0"></iframe>
+        <iframe class="lazyload"
+                data-src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8ee6428d5d4259ba83ac86ec82db7ccba4da2bf9fefa7defaa85c1912404319&amp;source=constructor"
+                width="100%" height="638" frameborder="0"></iframe>
     </section>
     <section class="additionally" id="additionally">
         <div class="container">
@@ -1398,15 +1451,19 @@
     <footer class="footer">
         <div class="container">
             <div class="footer_left">
-                <a href="tel:88462007762" class="footer__item footer__phone"><b>8&nbsp;846&nbsp;200 77 62</b>&nbsp;|
+                <a href="tel:88462007762" class="footer__item footer__phone"
+                   onclick="ym(64626682,'reachGoal','smr_phone_click');"><b>8&nbsp;846&nbsp;200 77 62</b>&nbsp;|
                     Самара</a>
-                <a href="tel:84954814696" class="footer__item footer__phone"><b>8&nbsp;495&nbsp;481 46 96</b>&nbsp;|
+                <a href="tel:84954814696" class="footer__item footer__phone"
+                   onclick="ym(64626682,'reachGoal','msk_phone_click');"><b>8&nbsp;495&nbsp;481 46 96</b>&nbsp;|
                     Москва</a>
                 <div class="footer__item footer__timework">пн-пт 9-18 по&nbsp;мск</div>
-                <div class="footer__item footer__email"><a href="mailto:info@bytecodecrm.ru" class=""><b>info@bytecodecrm.ru</b></a>&nbsp;|
+                <div class="footer__item footer__email"><a href="mailto:info@bytecodecrm.ru" class=""
+                                                           onclick="ym(64626682,'reachGoal','info_mail_click');"><b>info@bytecodecrm.ru</b></a>&nbsp;|
                     <span>Для&nbsp;предложений</span>
                 </div>
-                <div class="footer__item footer__email"><a href="mailto:sales@bytecodecrm.ru" class=""><b>sales@bytecodecrm.ru</b></a>&nbsp;|
+                <div class="footer__item footer__email"><a href="mailto:sales@bytecodecrm.ru" class=""
+                                                           onclick="ym(64626682,'reachGoal','info_mail_click');"><b>sales@bytecodecrm.ru</b></a>&nbsp;|
                     <span>Для&nbsp;заявок</span>
                 </div>
                 <div class="footer__item footer__adress"><b>Самара:</b> ул. Аэродромная, д.&nbsp;45, к. <br
@@ -1501,29 +1558,24 @@
         </div>
     </div>
     <form class="feedback__wrapper form" id="demo_f">
-        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
-               required>
-        <input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания*"
-               required>
-        <input type="number" class="form__input feedback__input" name="feedback__people"
-               placeholder="Количество сотрудников*"
-               required>
-        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
-               required>
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя">
+        <!--<input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания">-->
+        <!--<input type="number" class="form__input feedback__input" name="feedback__people" placeholder="Количество сотрудников">-->
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail">
         <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
-               value="+7"
-               required>
-        <input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город*"
-               required>
+               value="+7">
+        <!--<input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город">-->
         <div class="recaptcha feedback__recaptcha">
 
         </div>
+        <p class="captcha_error"></p>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
             персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить</span></button>
+        <button type="submit" class="btn btn_red feedback__submit"
+                onclick="ym(64626682,'reachGoal','try_free_request');"><span>Отправить</span></button>
     </form>
     <div class="result">
         <div class="title text-center">Ваш запрос успешно отправлен</div>
@@ -1541,23 +1593,17 @@
         </div>
     </div>
     <form class="feedback__wrapper form" id="demo_mf">
-        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
-               required>
-        <input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания*"
-               required>
-        <input type="number" class="form__input feedback__input" name="feedback__people"
-               placeholder="Количество сотрудников*"
-               required>
-        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
-               required>
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя">
+        <!--<input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания">-->
+        <!--<input type="number" class="form__input feedback__input" name="feedback__people" placeholder="Количество сотрудников">-->
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail">
         <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
-               value="+7"
-               required>
-        <input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город*"
-               required>
+               value="+7">
+        <!--<input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город">-->
         <div class="recaptcha feedback__recaptcha">
 
         </div>
+        <p class="captcha_error"></p>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
             персональных
@@ -1579,24 +1625,22 @@
         <div class="feedback__subtitle">Наши специалисты ответят на любой вопрос по Service Creatio в течение дня</div>
     </div>
     <form class="feedback__wrapper form" id="vop_f">
-        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
-               required>
-        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
-               required>
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя">
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail">
         <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
-               value="+7"
-               required>
-        <textarea name="feedback__comm" class="feedback__comm form__comm"
-                  placeholder="Ваше сообщение"></textarea>
+               value="+7">
+        <!--<textarea name="feedback__comm" class="feedback__comm form__comm" placeholder="Ваше сообщение"></textarea>-->
         <div class="recaptcha feedback__recaptcha">
 
         </div>
+        <p class="captcha_error"></p>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
             персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить</span></button>
+        <button type="submit" class="btn btn_red feedback__submit"
+                onclick="ym(64626682,'reachGoal','question_form_request');"><span>Отправить</span></button>
     </form>
     <div class="result">
         <div class="title text-center">Ваш запрос успешно отправлен</div>
@@ -1612,29 +1656,24 @@
         <div class="feedback__subtitle">Оставьте заявку на проведение презентации Service Creatio</div>
     </div>
     <form class="feedback__wrapper form" id="prez_f">
-        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
-               required>
-        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
-               required>
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя">
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail">
         <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
-               value="+7"
-               required>
-        <input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания*"
-               required>
-        <input type="number" class="form__input feedback__input" name="feedback__people"
-               placeholder="Количество сотрудников*"
-               required>
-        <textarea name="feedback__comm" class="feedback__comm form__comm"
-                  placeholder="Ваше сообщение"></textarea>
+               value="+7">
+        <!--<input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания">-->
+        <!--<input type="number" class="form__input feedback__input" name="feedback__people" placeholder="Количество сотрудников">-->
+        <!--<textarea name="feedback__comm" class="feedback__comm form__comm" placeholder="Ваше сообщение"></textarea>-->
         <div class="recaptcha feedback__recaptcha">
 
         </div>
+        <p class="captcha_error"></p>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="#conf-in" data-fancybox>обработку
             персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить</span></button>
+        <button type="submit" class="btn btn_red feedback__submit"
+                onclick="ym(64626682,'reachGoal','presentation_form_request');"><span>Отправить</span></button>
     </form>
     <div class="result">
         <div class="title text-center">Ваш запрос успешно отправлен</div>
@@ -1652,15 +1691,11 @@
         </div>
     </div>
     <form class="feedback__wrapper form" id="pred_f">
-        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
-               required>
-        <input type="text" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
-               required>
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя">
+        <input type="text" class="form__input feedback__input" name="feedback__email" placeholder="E-mail">
         <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="+7(___)___-__-__"
-               value="+7"
-               required>
-        <textarea name="feedback__comm" class="feedback__comm form__comm"
-                  placeholder="Ваше сообщение"></textarea>
+               value="+7">
+        <!--<textarea name="feedback__comm" class="feedback__comm form__comm" placeholder="Ваше сообщение"></textarea>-->
         <div class="feedback__file-wrapper">
             <input type="file" name="feed__file" id="feed__file" class="inputfile feedback__file"
                    data-multiple-caption="{count} files selected" multiple>
@@ -1673,6 +1708,7 @@
         <div class="recaptcha feedback__recaptcha">
 
         </div>
+        <p class="captcha_error"></p>
         <div class="confidencial feedback__confidencial">
             Нажимая на кнопку «Отправить», вы даёте согласие на <a href="">обработку персональных
             данных</a>
@@ -1808,8 +1844,6 @@
     </div>
 </div>
 <div id="svg-icons" class="svg-icons"></div>
-<link href="assets/css/vendors.47ccfeeeb9c8f12a004c.css" rel="stylesheet">
-<link href="assets/css/app.47ccfeeeb9c8f12a004c.css" rel="stylesheet">
 <script src="assets/js/vendors.47ccfeeeb9c8f12a004c.js" async></script>
 <script src="assets/js/app.47ccfeeeb9c8f12a004c.js" async></script>
 <script src="assets/js/jquery.js"></script>
@@ -1848,6 +1882,7 @@
 
             var res = '';
             var bat = this;
+            var theme = $(this).attr('id');
             $.ajax({
                 url: '/form.php',
                 type: 'POST',
@@ -1863,11 +1898,25 @@
                             $(bat).next().show();
                             $(bat).prev().hide();
                             $(bat).hide();
+                        } else if (data == 'bad') {
+                            $(bat).find('.recaptcha').children().addClass('light_rec');
+                            if (theme == 'otkr') {
+                                $(bat).find('.captcha_errorR').html('Подтвердите, что Вы не робот');
+                            } else {
+                                $(bat).find('.captcha_error').html('Подтвердите, что Вы не робот');
+                            }
                         }
                     } else {
                         if (data == 'good') {
                             console.log('that');
                             $('#otkr_z')[0].click();
+                        } else if (data == 'bad') {
+                            $(bat).find('.recaptcha').children().addClass('light_rec');
+                            if (theme == 'otkr') {
+                                $(bat).find('.captcha_errorR').html('Подтвердите, что Вы не робот');
+                            } else {
+                                $(bat).find('.captcha_error').html('Подтвердите, что Вы не робот');
+                            }
                         }
                     }
                 }
@@ -1887,9 +1936,49 @@
     button, input {
         outline: none;
     }
+
+    .light_rec {
+        border: 2px solid red;
+        overflow: hidden;
+    }
+
+    .captcha_error {
+        padding-top: 10px;
+        grid-column: 1 /span 3;
+        text-align: center;
+        color: red;
+        width: 100%;
+        height: 0px;
+    }
+
+    .captcha_errorR {
+        padding-top: 10px;
+        grid-column: 1 /span 3;
+        text-align: center;
+        color: white;
+    }
+
+    .feedback__file-wrapper {
+        grid-column: 2 / span 3;
+    }
+
+    .feedback__wrapper, #vop_f {
+        grid-template-rows: 50px 80px;
+    }
+
+    #feed__file1_label {
+        max-width: 345px;
+        height: auto;
+        padding: 22px;
+    }
+
+    .modal .confidencial {
+        margin-top: 0;
+    }
+
 </style>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+<script type="text/javascript" defer>
     (function (m, e, t, r, i, k, a) {
         m[i] = m[i] || function () {
             (m[i].a = m[i].a || []).push(arguments)
@@ -1913,11 +2002,26 @@
 </script>
 <script>
     $(document).ready(function () {
-        $(function() {
+        $(function () {
             $('.lazy').lazy();
         })
     });
 </script>
+<script>
+    function clickOnTab(str) {
+        if ($(document).width() > 760) {
+            console.log('not good');
+            str = 'a[href="#' + str + '"]';
+            console.log($(str));
+            var par = $(str).parent();
+            par.remove();
+            par.prependTo('.cd-tabs__list');
+            $(str)[0].click();
+        }
+
+    }
+</script>
+<script src="//code.jivosite.com/widget/Ng4pLSMLmD" async></script>
 <noscript>
     <div><img src="https://mc.yandex.ru/watch/64626682" style="; left:-9999px;" alt=""/></div>
 </noscript>
